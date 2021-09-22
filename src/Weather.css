@@ -1,0 +1,26 @@
+.weather-info{
+    height: 300px;
+}
+
+.weather-info h1 {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.weather-info h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+p {
+    text-align: center;
+}
+
+.local-temp {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Weather.css";
 
 export default function Weather(props) {
     let [temperature, setTemperature] = useState(null);
@@ -16,11 +17,12 @@ export default function Weather(props) {
 
     if (temperature) {
         return (
-            <h1>
-                The temperature in {props.city} is {Math.round(temperature)} °C
-            </h1>
+            <div className="weather-info">
+                <h2>{props.city}</h2> 
+                <h1>{Math.round(temperature)} °C</h1>
+            </div>
         );
     } else {
-        return <p>Loading....</p>;
+        return <p className="local-temp">Local temperature</p>;
     }
 }

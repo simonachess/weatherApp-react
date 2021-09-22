@@ -1,0 +1,27 @@
+input[type="submit"] {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+input[type="search"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.search-date-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.city-container {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.date-container p {
+    margin: 0.5rem;
+    text-align: center;
+}
