@@ -1,10 +1,16 @@
-.weather-info{
+.weather-info {
     height: 300px;
 }
 
-.weather-info h1 {
+.weather-info .temperature {
     margin: 0;
     font-size: 5rem;
+    font-weight: 400;
+}
+
+.weather-info .unit {
+    margin: 0;
+    font-size: 3rem;
     font-weight: 400;
 }
 
