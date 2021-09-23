@@ -20,17 +20,18 @@ export default function Search() {
             <div className="city-container">
                 
                 <form onSubmit={handleSubmit}>
-                    <input type="search" onChange={updateCity} />
+                    <input type="search" onChange={updateCity} autoFocus="on"/>
                     <input type="submit" value="Search" />
                 </form>
                 
                 <div className="date-container">
-                    <p>September 22</p>
-                    <p><span>Tuesday </span><span>11:05</span></p>
+                    <p>Local day September 22</p>
+                    <p><span>Local time Tuesday </span><span>11:05</span></p>
+                   
                 </div>
             </div>
             <div>
-                <Weather city={city} />
+                <Weather city={city}/>
             </div>
         </div>
     );

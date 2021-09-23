@@ -16,6 +16,7 @@ export default function Weather(props) {
             description: response.data.weather[0].description,
             wind: response.data.wind.speed,
             date: new Date(response.data.dt * 1000),
+            iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
             city: response.data.name
         });
     }
@@ -24,8 +25,8 @@ export default function Weather(props) {
         return (
             <div className="weather-info">
                 <h2>{props.city}</h2> 
-                <h1><span className="temperature">{Math.round(weatherData.temperature)}°</span>
-                <span className="unit">C</span> </h1>
+                <p><img alt="weather-icon" src={weatherData.iconUrl}/><span className="temperature">{Math.round(weatherData.temperature)}°</span>
+                <span className="unit">C</span> </p>
                 <h4 className="desc">{weatherData.description}</h4>
                 <h4>Humidity: {weatherData.humidity} %</h4>
                 <h4>Wind: {weatherData.wind} km/h</h4>

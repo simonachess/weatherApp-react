@@ -9,6 +9,12 @@
     font-weight: 500;
 }
 
+.weather-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .weather-info .desc {
     text-transform: capitalize;
 }
