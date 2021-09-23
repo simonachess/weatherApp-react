@@ -15,5 +15,5 @@ code {
 .container {
 margin: 0 auto;
  border: 1px solid black;
- padding: 1rem;
+ padding: 1rem 1.5rem;
 }

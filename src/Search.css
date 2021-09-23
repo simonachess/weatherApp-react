@@ -1,11 +1,16 @@
 input[type="submit"] {
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 0.5rem 1rem;
 }
 
 input[type="search"] {
+    margin: 0.5rem;
     padding: 0.5rem;
-    font-size: 1rem;
+    width: 45%;
+}
+
+form{
+    text-align: left;
 }
 
 .search-date-container {
@@ -18,7 +23,7 @@ input[type="search"] {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .date-container p {
