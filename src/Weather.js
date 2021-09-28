@@ -7,6 +7,14 @@ export default function Weather(props) {
     
     const [weatherData, setWeatherData] = useState({ready: false});
     
+    React.useEffect(() => {
+        const apiKey = "3a94f3778290bfeee61278505dbbe51d";
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+
+        if (props.city) {
+            axios.get(url).then(handleResponse);
+        }
+    }, [props]);
 
     function handleResponse(response) {
         setWeatherData({
@@ -17,7 +25,7 @@ export default function Weather(props) {
             wind: response.data.wind.speed,
             date: new Date(response.data.dt * 1000),
             iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-            city: response.data.name
+
         });
     }
 
@@ -30,16 +38,11 @@ export default function Weather(props) {
                 <h4 className="desc">{weatherData.description}</h4>
                 <h4>Humidity: {weatherData.humidity} %</h4>
                 <h4>Wind: {weatherData.wind} km/h</h4>
-                <FormatedDate date={weatherData.date} />
+                <div>Last updated: <FormatedDate date= {weatherData.date} /></div>
             </div>
         );
     } else {
-        const apiKey = "3a94f3778290bfeee61278505dbbe51d";
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
 
-        if (props.city) {
-            axios.get(url).then(handleResponse);
-        }
         return <p className="local-temp">Local temperature</p>;
     }
 }
