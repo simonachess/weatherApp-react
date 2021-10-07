@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import FormatedDate from "./FormatedDate";
+import Forecast from "./Forecast";
 
 export default function Weather(props) {
     
@@ -9,6 +10,9 @@ export default function Weather(props) {
     
     React.useEffect(() => {
         const apiKey = "3a94f3778290bfeee61278505dbbe51d";
+        // let longitude = 40.7;
+        // let latitude= 74;
+        // let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
 
         if (props.city) {
@@ -17,8 +21,10 @@ export default function Weather(props) {
     }, [props]);
 
     function handleResponse(response) {
+        console.log(response.data)
         setWeatherData({
             ready:true,
+            coordinates: response.data.coord,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
             description: response.data.weather[0].description,
@@ -39,10 +45,11 @@ export default function Weather(props) {
                 <h4>Humidity: {weatherData.humidity} %</h4>
                 <h4>Wind: {weatherData.wind} km/h</h4>
                 <div>Last updated: <FormatedDate date= {weatherData.date} /></div>
+                <Forecast coordinates={weatherData.coordinates} />
             </div>
         );
     } else {
 
-        return <p className="local-temp">Local temperature</p>;
+        return <div className="local-temp"><p >Local temperature</p> </div>;
     }
 }
