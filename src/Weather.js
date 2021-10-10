@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Weather.css";
 import FormatedDate from "./FormatedDate";
@@ -9,7 +9,7 @@ export default function Weather(props) {
     
     const [weatherData, setWeatherData] = useState({ready: false});
     
-    React.useEffect(() => {
+    useEffect(() => {
         const apiKey = "3a94f3778290bfeee61278505dbbe51d";
         // let longitude = 40.7;
         // let latitude= 74;
