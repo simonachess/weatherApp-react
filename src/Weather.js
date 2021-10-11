@@ -53,6 +53,6 @@ export default function Weather(props) {
         );
     } else {
 
-        return <div className="local-temp"><p >Local temperature</p> </div>;
+        return <div className="local-temp"><p >Loading...</p> </div>;
     }
 }
