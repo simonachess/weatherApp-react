@@ -41,9 +41,8 @@ export default function Weather(props) {
         return (
             <div className="weather-info">
                 <h2>{props.city}</h2> 
-                <p><WeatherIcon code={weatherData.icon}/>
-                    {/* <img alt="weather-icon" src={weatherData.iconUrl}/> */}
-                    <span className="temperature">{Math.round(weatherData.temperature)}°</span>
+                <p><WeatherIcon code={weatherData.icon} size={78}/>
+                <span className="temperature">{Math.round(weatherData.temperature)}°</span>
                 <span className="unit">C</span> </p>
                 <h4 className="desc">{weatherData.description}</h4>
                 <h4>Humidity: {weatherData.humidity} %</h4>

@@ -12,24 +12,20 @@ export default function Forecast(props) {
         setLoaded(true);
     }
 
-useEffect(() =>{
-setLoaded(false);
-}, [props])
-
+    useEffect(() => {
+        setLoaded(false);
+    }, [props])
 
     if (loaded) {
         return (<div className="forecast-container">
-            {forecast.map(function(dailyForecast, index){
-                if(index < 5){
-                 return(
-                    <div key={index}>
-                    <ForecastDay data={dailyForecast}/>
-                    </div>
-                )   
+            {forecast.map(function (dailyForecast, index) {
+                if (index < 5) {
+                    return (
+                        <div key={index}>
+                            <ForecastDay data={dailyForecast} />
+                        </div>)
                 }
-                
             })}
-           
         </div>);
     }
     else {

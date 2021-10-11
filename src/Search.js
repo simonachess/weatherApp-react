@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import LocalTime from "./LocalTime";
 import "./Search.css";
 import Weather from "./Weather";
+
 
 export default function Search() {
     let [city, setCity] = useState("");
@@ -23,8 +25,7 @@ export default function Search() {
                     <input type="submit" value="Search" />
                 </form>
                 <div className="date-container">
-                    <p>Local day September 22</p>
-                    <p><span>Local time Tuesday </span><span>11:05</span></p>
+                    <LocalTime />
                 </div>
             </div>
             <div>
