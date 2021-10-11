@@ -44,10 +44,10 @@ export default function Weather(props) {
                 <p><WeatherIcon code={weatherData.icon} size={78}/>
                 <span className="temperature">{Math.round(weatherData.temperature)}°</span>
                 <span className="unit">C</span> </p>
-                <h4 className="desc">{weatherData.description}</h4>
-                <h4>Humidity: {weatherData.humidity} %</h4>
-                <h4>Wind: {weatherData.wind} km/h</h4>
-                <div>Last updated: <FormatedDate date= {weatherData.date} /></div>
+                <h3 className="desc">{weatherData.description}</h3>
+                <h3>Humidity: {weatherData.humidity} %</h3>
+                <h3>Wind: {weatherData.wind} km/h</h3>
+                <small className="last-updated">Last updated: <FormatedDate date= {weatherData.date} /></small>
                 <Forecast coordinates={weatherData.coordinates} />
             </div>
         );

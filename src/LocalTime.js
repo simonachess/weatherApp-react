@@ -1,4 +1,5 @@
 import React from "react";
+import "./LocalTime.css"
 
 export default function LocalTime() {
 
@@ -9,10 +10,10 @@ export default function LocalTime() {
         let day = now.getDate();
 
 
-        if (month.toString().length == 1) {
+        if (month.toString().length === 1) {
             month = '0' + month;
         }
-        if (day.toString().length == 1) {
+        if (day.toString().length === 1) {
             day = '0' + day;
         }
 
@@ -27,17 +28,17 @@ export default function LocalTime() {
         let now = new Date();
         let hour = now.getHours();
         let minute = now.getMinutes();
-        if (hour.toString().length == 1) {
+        if (hour.toString().length === 1) {
             hour = '0' + hour;
         }
-        if (minute.toString().length == 1) {
+        if (minute.toString().length === 1) {
             minute = '0' + minute;
         }
         var showTime = hour + ':' + minute;
         return showTime
     }
 
-    return <div calssName="local-time">
+    return <div className="local-time">
         <p>{getDate()}</p>
         <p>{getTime()}</p>
     </div>

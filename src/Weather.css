@@ -1,5 +1,9 @@
-p{
-    margin:0.5rem 0 0.5rem 0;
+p {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+h3 {
+    font-weight: normal;
 }
 
 .weather-info h4 {
@@ -11,6 +15,7 @@ p{
     margin: 0;
     font-size: 2rem;
     font-weight: 500;
+    text-shadow: 1px 1px 4px #656363;
 }
 
 .weather-info p {
@@ -27,12 +32,14 @@ p{
     margin: 0;
     font-size: 3.5rem;
     font-weight: 400;
+    text-shadow: 1px 1px 4px #656363;
 }
 
 .weather-info .unit {
     margin: 0;
     font-size: 3rem;
     font-weight: 400;
+    text-shadow: 1px 1px 4px #656363;
 }
 
 .local-temp {
@@ -42,6 +49,12 @@ p{
     justify-content: center;
     text-align: center;
 }
-.temperature{
-    padding-left:1rem;
+
+.temperature {
+    padding-left: 1rem;
+}
+
+.last-updated {
+    font-style: italic;
+    letter-spacing: 0.05rem;
 }

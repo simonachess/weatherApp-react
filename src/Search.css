@@ -1,15 +1,33 @@
 input[type="submit"] {
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(173, 171, 171, 0.932);
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    color: #fff;
+    background-color: rgb(88, 88, 88);
+    box-shadow: rgb(99, 99, 99) 0px 0px 30px 10px;
 }
 
 input[type="search"] {
     margin: 0.5rem;
     padding: 0.5rem;
     width: 45%;
+    outline: none;
+    border: rgb(103, 110, 122) 1px solid;
+    border-radius: 10px;
+    font-size: 1rem;
 }
 
-form{
+input[type="search"]:hover {
+    box-shadow: rgb(99, 99, 99) 0px 3px 35px 3px;
+}
+
+form {
     text-align: left;
 }
 
@@ -26,7 +44,7 @@ form{
     justify-content: space-around;
 }
 
-.date-container p {
+.date-container {
     margin: 0.5rem;
     text-align: center;
 }
