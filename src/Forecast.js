@@ -18,13 +18,13 @@ export default function Forecast(props) {
 
     if (loaded) {
         return (<div className="forecast-container">
-            {forecast.map(function (dailyForecast, index) {
-                if (index < 5) {
+            {forecast.slice(0,5).map(function (dailyForecast, index) {
+                
                     return (
                         <div key={index}>
                             <ForecastDay data={dailyForecast} />
                         </div>)
-                }
+                
             })}
         </div>);
     }
