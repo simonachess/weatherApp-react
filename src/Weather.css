@@ -4,6 +4,7 @@ p {
 
 h3 {
     font-weight: normal;
+    margin:0.4rem;
 }
 
 .weather-info h4 {
@@ -22,6 +23,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1.7rem;
 }
 
 .weather-info .desc {
