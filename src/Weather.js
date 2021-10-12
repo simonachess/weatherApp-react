@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Hexdots } from 'css-spinners-react'
 import axios from "axios";
 import "./Weather.css";
 import FormatedDate from "./FormatedDate";
@@ -53,6 +54,6 @@ export default function Weather(props) {
         );
     } else {
 
-        return <div className="local-temp"><p >Loading...</p> </div>;
+        return <div className="local-temp"><Hexdots /></div>;
     }
 }
